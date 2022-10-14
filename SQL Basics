@@ -1,0 +1,67 @@
+CREATE TABLE student1(
+    student_id INT ,
+    name VARCHAR(20) NOT NULL,      /* Name cannot be null */
+    subject VARCHAR(20) UNIQUE,     /* cannot put dublicate entry in subject column */
+    teacher VARCHAR(20) DEFAULT 'Not Decided',  /* If we don't add value the default is (Not Decided) */                
+    PRIMARY KEY(student_id)
+);
+
+DESCRIBE student1;
+
+DROP TABLE student1;     /* used to delete the table */
+DROP COLUMN
+
+ALTER TABLE student1 ADD gpa DECIMAL(3,2);  /* Adding column to the table */
+ALTER TABLE student1 DROP COLUMN gpa;       /* removing column from the table */
+
+
+
+
+/* Inserting data in table */
+
+SELECT * FROM student1;      /* To select all the values from the table and print them */
+
+INSERT INTO student1 VALUES(1,'SHUBHAM','ELECTRONICS',"Prakash");     /* Inserting values into the bale */
+
+INSERT INTO student1(student_id,name,subject) VALUES(2,'RAM','CS');
+
+/* Now lets say that we don't have any subject to add */
+INSERT INTO student1(student_id,name,teacher) VALUES(5,'SAI','Mahabai');
+INSERT INTO student1 VALUES(4,'Vartika','Chemical','Chandu');
+
+
+
+
+
+
+
+
+
+-- UPDATE AND DELETE
+
+SELECT * FROM student1;
+
+/* Updating the data from the table */
+
+UPDATE student1
+SET subject = 'Bio'
+WHERE subject = 'Chemical';
+
+
+/* Updating the specific data from the table */
+
+UPDATE student1
+SET SUBJECT = 'Maths'
+WHERE student_id = 3;
+
+
+
+UPDATE student1
+SET SUBJECT = 'Marathi'
+WHERE student_id = 5;
+
+
+/* Delete Query */
+
+DELETE FROM student1
+WHERE student_id = 3;
