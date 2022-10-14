@@ -1,0 +1,28 @@
+-- Find any client who are an LLC
+-- LIKE is used to find any specific data from Database
+SELECT * 
+FROM client
+WHERE client_name LIKE '%LLC';
+
+
+SELECT *
+FROM employee
+WHERE last_name LIKE '%PORTER';
+
+
+-- Find any branch supplier who are in tha label busisness
+SELECT * 
+FROM branch_supplier
+WHERE supplier_name LIKE '%LABEL%';
+
+
+-- Find any employee born in October
+SELECT *
+FROM employee
+WHERE birth_day LIKE '____-10%';
+
+
+-- find any clients who are schools
+SELECT * 
+FROM client 
+WHERE client_name LIKE '%SCHOOL%'
