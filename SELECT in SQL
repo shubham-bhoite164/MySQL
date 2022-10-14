@@ -1,0 +1,87 @@
+SELECT * FROM student1;
+
+
+/* Printing just names and subject from the table */
+SELECT name, subject FROM student1;
+
+
+/* We can aplhabetically order the table */
+SELECT *
+FROM student1
+ORDER BY subject;
+
+
+/* We can aplhabetically descending order the table */
+SELECT name,subject
+FROM student1
+ORDER BY subject DESC;
+
+
+
+/* We can limit the output*/
+SELECT * FROM STUDENT1
+LIMIT 2;
+
+
+
+/* Filtering the specific data*/
+SELECT * 
+FROM STUDENT1
+WHERE subject = 'CS' OR NAME = 'SHUBHAM';
+
+
+
+
+SELECT * 
+FROM STUDENT1
+WHERE student_id>3;
+
+
+-- Find all the employee
+SELECT *
+FROM employee;
+
+
+-- Find all clients name
+SELECT client_name 
+FROM client;
+
+
+-- Find all employees ordered by salaries
+SELECT *
+FROM employee
+ORDER BY salary ;
+
+
+-- Find all employees ordered by salaries in Descinding order
+SELECT *
+FROM employee
+ORDER BY salary DESC;
+
+
+-- Find all employees ordered by sex and then name
+SELECT *
+FROM employee
+ORDER BY sex, first_name, last_name;
+
+
+-- Find the first 5 employee in the table
+SELECT *
+FROM employee
+LIMIT 5;
+
+
+-- Find First and Last names of all employee
+SELECT first_name , last_name
+FROM employee;
+
+
+-- Find out all the different genders of all employee
+SELECT DISTINCT SEX
+FROM employee;
+
+
+-- Find out all the different branch ids
+SELECT DISTINCT branch_id
+FROM employee;
+
